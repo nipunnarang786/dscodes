@@ -18,7 +18,7 @@ public class LinkedList {
         new_node.next = head; 
         head = new_node; 
     }
-    static boolean detectLoop(Node h) 
+    static boolean loopdetection(Node h) 
     { 
         HashSet<Node> s = new HashSet<Node>(); 
         while (h != null) {
@@ -42,7 +42,7 @@ public class LinkedList {
  
         llist.head.next.next.next.next = llist.head; 
   
-        if (detectLoop(head)) 
+        if (loopdetection(head)) 
             System.out.println("Loop found"); 
         else
             System.out.println("No Loop"); 
